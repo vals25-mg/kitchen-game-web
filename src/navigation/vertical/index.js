@@ -1,12 +1,13 @@
 export default [
   {
-    title: 'Home',
+    title: 'Statistique',
     to: { name: 'root' },
-    icon: { icon: 'tabler-smart-home' },
+    icon: { icon: 'tabler-dashboard' },
   },
   {
-    title: 'Second page',
+    title: 'Commandes',
     to: { name: 'second-page' },
-    icon: { icon: 'tabler-file' },
+    icon: { icon: 'tabler-burger' },
   },
+
 ]

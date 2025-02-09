@@ -42,7 +42,7 @@ const resolveNavItemComponent = item => {
     return VerticalNavSectionTitle
   if ('children' in item)
     return VerticalNavGroup
-  
+
   return VerticalNavLink
 }
 
@@ -93,7 +93,7 @@ const hideTitleAndIcon = configStore.isVerticalNavMini(isHovered)
               v-show="!hideTitleAndIcon"
               class="app-logo-title"
             >
-              {{ layoutConfig.app.title }}
+              Hisakafo
             </h1>
           </Transition>
         </RouterLink>

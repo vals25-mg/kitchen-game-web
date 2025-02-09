@@ -9,6 +9,7 @@ import authV2MaskDark from '@images/pages/misc-mask-dark.png'
 import authV2MaskLight from '@images/pages/misc-mask-light.png'
 import { VNodeRenderer } from '@layouts/components/VNodeRenderer'
 import { themeConfig } from '@themeConfig'
+import logo from '@images/Asset15.svg?raw'
 
 definePage({
   meta: {
@@ -31,10 +32,10 @@ const authThemeMask = useGenerateImageVariant(authV2MaskLight, authV2MaskDark)
 <template>
   <a href="javascript:void(0)">
     <div class="auth-logo d-flex align-center gap-x-3">
-      <VNodeRenderer :nodes="themeConfig.app.logo" />
-      <h1 class="auth-title">
+      <VNodeRenderer :nodes="h('div', { innerHTML: logo, style: 'line-height:0; color: rgb(var(--v-global-theme-primary))' })" />
+      <!-- <h1 class="auth-title">
         {{ themeConfig.app.title }}
-      </h1>
+      </h1> -->
     </div>
   </a>
 
@@ -42,7 +43,7 @@ const authThemeMask = useGenerateImageVariant(authV2MaskLight, authV2MaskDark)
     <VCol md="8" class="d-none d-md-flex">
       <div class="position-relative bg-background w-100 me-0">
         <div class="d-flex align-center justify-center w-100 h-100" style="padding-inline: 6.25rem;">
-          <VImg max-width="613" :src="authThemeImg" class="auth-illustration mt-16 mb-2" />
+          <!-- <VImg max-width="613" :src="authThemeImg" class="auth-illustration mt-16 mb-2" /> -->
         </div>
 
         <img class="auth-footer-mask flip-in-rtl" :src="authThemeMask" alt="auth-footer-mask" height="280" width="100">
@@ -53,7 +54,7 @@ const authThemeMask = useGenerateImageVariant(authV2MaskLight, authV2MaskDark)
       <VCard flat :max-width="500" class="mt-12 mt-sm-0 pa-6">
         <VCardText>
           <h4 class="text-h4 mb-1">
-            Bienvenue <span class="text-capitalize">{{ themeConfig.app.title }}</span>! 👋🏻
+            Bienvenue sur <span class="text-capitalize">{{ themeConfig.app.title }}</span>! 👋🏻
           </h4>
           <p class="mb-0">
             L'aventure commence avec un clic. Connectez-vous !
